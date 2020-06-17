@@ -1,0 +1,2 @@
+# miniolcne
+MiniOLCNE Vagrant Box

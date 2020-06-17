@@ -5,14 +5,15 @@ The first step is to clone this repository:
 
     git clone https://github.com/osmarleao/miniolcne
 
-There are some requirements before you use VagrantFile to deploy your miniOLCNE box:
+Use this [VagrantFile](https://github.com/osmarleao/miniolcne/blob/master/Vagrantfile) to deploy your miniOLCNE:
 
-* Configure one Host-Only Interface on your VirtualBOX with an IP address inside 172.31.188.0/24 network (excluding the IP 172.31.188.1);
+    vagrant up
 
-* Use this interface name on `VagrantFile`, like example below:
+After the VM is up and running, you need to wait about 10 minutes to Kubernetes to boot.
 
-      config.vm.network "private_network", ip: "172.31.188.1",
-        name: "vboxnet"
-      config.vm.hostname = "miniolcne.br.olsclab.net"
+Use the [kubeconfig](https://github.com/osmarleao/miniolcne/blob/master/kubeconfig) file to access your Kubernetes cluster:
 
-* 
+    kubectl --kubeconfig kubeconfig get pods -A
+
+To install a kubectl command, follow these instructions: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+

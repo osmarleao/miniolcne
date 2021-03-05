@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "osmarleao/minienv"
-  config.vm.box_version = "1.1"
+  config.vm.box_version = "1.2.2"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
